@@ -23,11 +23,13 @@ string[] FillArray(int arrayLength)
 
 void PrintArray(string[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    Console.Write("[");
+    for (int i = 0; i < array.Length - 1; i++)
     {
-        Console.Write($"{array[i]} ");
+        Console.Write($"\u0022{array[i]}\u0022, ");
     }
-    Console.WriteLine();
+    Console.Write($"\u0022{array[array.Length - 1]}\u0022");
+    Console.WriteLine("]");
 }
 
 string[] array = FillArray(initialArrayLength);
