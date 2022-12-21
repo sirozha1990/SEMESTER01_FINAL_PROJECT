@@ -28,7 +28,10 @@ void PrintArray(string[] array)
     {
         Console.Write($"\u0022{array[i]}\u0022, ");
     }
-    Console.Write($"\u0022{array[array.Length - 1]}\u0022");
+    if (array.Length > 0) 
+    {
+        Console.Write($"\u0022{array[array.Length - 1]}\u0022");
+    }
     Console.WriteLine("]");
 }
 
